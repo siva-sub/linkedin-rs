@@ -430,7 +430,7 @@ impl LinkedInClient {
     /// MULTIPART instead of SINGLE upload metadata. LinkedIn's CDN may
     /// return `partUploadRequests` for files above this threshold, which
     /// the multipart flow handles. Even when the server returns SINGLE,
-    /// the upload succeeds because CDN PUTs now bypass the VPN proxy
+    /// The upload succeeds because CDN PUTs now bypass the VPN proxy
     /// (the real root cause of previous failures).
     /// The GIF stays a native GIF — no conversion or compression.
     const MULTIPART_THRESHOLD: usize = 1_000_000; // 1 MB
